@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorFont">#C60F13</color>
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="blue_grey_900">#263238</color>
+    <color name="grey">#DDDDDD</color>
+    <color name="greyLight">#EEEEEE</color>
+    <color name="greyDark">#BBBBBB</color>
+    <color name="blueLink">#0645AD</color>
+    <color name="black_85">#D8000000</color>
+    <color name="black_85_light">#B4000000</color>
+    <color name="black">#000000</color>
+
+    <color name="colorPrimary">#2a3495</color>
+    <color name="colorPrimaryDark">#a2c845</color>
+    <color name="colorAccent">#a2c845</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+</resources>

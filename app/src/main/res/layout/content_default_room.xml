@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".panel.activity.DefaultRoomActivity"
+    tools:showIn="@layout/app_bar_default_room"
+    android:id="@+id/relativeLayout_Parent"
+    >
+    <FrameLayout
+        android:id="@+id/frameLayout_topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgView_defaultRoomImage"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shader"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/frameLayout_topPanel">
+        <TextClock
+            android:id="@+id/txtClock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="75dp"
+            android:layout_marginTop="250dp"
+            android:textColor="#ffffff"
+            android:text="2:18 PM"
+            android:textSize="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/txtView_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="315dp"
+            android:textColor="#ffffff"
+            android:text="2:18 PM"
+            android:textSize="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/txtView_roomHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:text="Dining Room"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"
+            android:layout_alignParentLeft="true"/>
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/btn_roomToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:checked="true"
+            android:textOn="    ✔    "
+            android:textOff="    x    "
+            app:showText="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:elevation="10dp"
+        app:diagonal_angle="20"
+        app:diagonal_position="bottom"
+        app:diagonal_direction="right"> -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_lights_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:layout_below="@id/frameLayout_topPanel">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:text="Lights!" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_lights"
+        android:layout_width="match_parent"
+        android:layout_below="@id/relativeLayout_lights_header"
+        android:layout_height="wrap_content">
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/light1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_lightbulb" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/light2"
+            android:layout_toRightOf="@+id/light1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_white_balance_iridescent" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/study_lamp"
+            android:layout_toRightOf="@+id/light2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_spotlight_beam" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_sockets_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:layout_below="@+id/relativeLayout_lights">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:text="Power Sockets!" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_sockets"
+        android:layout_width="match_parent"
+        android:layout_below="@id/relativeLayout_sockets_header"
+        android:layout_height="wrap_content">
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/socket1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_power_socket" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/socket2"
+            android:layout_toRightOf="@+id/socket1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_power_socket" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/usb1"
+            android:layout_toRightOf="@+id/socket2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_usb" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/usb2"
+            android:layout_toRightOf="@+id/usb1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_usb" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_other_appliances_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:layout_below="@+id/relativeLayout_sockets">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:text="Other Appliances" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_other_appliances"
+        android:layout_width="match_parent"
+        android:layout_below="@id/relativeLayout_other_appliances_header"
+        android:layout_height="wrap_content">
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/fan1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_fan" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/wifi_router"
+            android:layout_toRightOf="@+id/fan1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_access_point" />
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/laptop"
+            android:layout_toRightOf="@+id/wifi_router"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:padding="25dp"
+            app:iiv_color="@color/greyDark"
+            app:iiv_icon="cmd_apple" />
+    </RelativeLayout>
+
+
+    <!-- </com.github.florent37.diagonallayout.DiagonalLayout> -->
+</RelativeLayout>
